@@ -2,7 +2,7 @@ import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import { ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
-import Image from 'next/image';
+import ImageWithLoading from '@/components/image-with-loading';
 import BottomNav from '@/components/bottom-nav';
 import TopBlur from '@/components/top-blur';
 
@@ -36,12 +36,12 @@ export default function AboutPage() {
           When I'm not designing or coding, you can find me on the golf course or spending time away
           from the screen with family and friends.
         </p>
-        <Image
+        <ImageWithLoading
           src="/golf-course.png"
           alt="On the golf course"
-          width={280}
-          height={280}
-          className="w-full rounded-lg object-cover mb-4"
+          width={800}
+          height={600}
+          className="w-full rounded-xl object-cover mb-4 aspect-[4/3]"
         />
       </section>
 

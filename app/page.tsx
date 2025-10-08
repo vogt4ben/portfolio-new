@@ -1,5 +1,5 @@
 // Removed unused imports related to projects section
-import Image from 'next/image';
+import InlineImageWithLoading from '@/components/inline-image-with-loading';
 import BottomNav from '@/components/bottom-nav';
 import TopBlur from '@/components/top-blur';
 
@@ -16,12 +16,13 @@ export default function Home() {
             {/* Row 1 */}
             <div className="text-right font-normal text-muted-foreground flex items-center justify-end whitespace-nowrap">
               Hello I'm
-              <Image
+              <InlineImageWithLoading
                 src="/person-image.png"
                 alt="Person"
                 width={50}
                 height={50}
                 className="inline-block align-middle ml-2 rounded-2xl shadow-md w-10 h-10 sm:w-[50px] sm:h-[50px]"
+                priority
               />
             </div>
             <div className="font-bold flex items-center">Ben,</div>
@@ -29,12 +30,13 @@ export default function Home() {
             {/* Row 2 */}
             <div className="text-right font-normal text-muted-foreground flex items-center justify-end whitespace-nowrap">
               a product
-              <Image
+              <InlineImageWithLoading
                 src="/laptop.png"
                 alt="Laptop"
                 width={50}
                 height={50}
                 className="inline-block align-middle ml-2 rounded-2xl shadow-md w-10 h-10 sm:w-[50px] sm:h-[50px]"
+                priority
               />
             </div>
             <div className="font-bold flex items-center">designer</div>
@@ -42,12 +44,13 @@ export default function Home() {
             {/* Row 3 */}
             <div className="text-right font-normal text-muted-foreground flex items-center justify-end whitespace-nowrap">
               working at
-              <Image
+              <InlineImageWithLoading
                 src="/cq-logo.png"
                 alt="Cequence Security Logo"
                 width={50}
                 height={50}
                 className="inline-block align-middle ml-2 rounded-2xl shadow-md w-10 h-10 sm:w-[50px] sm:h-[50px]"
+                priority
               />
             </div>
             <div className="font-bold flex items-center">Cequence</div>
@@ -55,12 +58,13 @@ export default function Home() {
             {/* Row 4 */}
             <div className="text-right font-normal text-muted-foreground flex items-center justify-end whitespace-nowrap">
               based in
-              <Image
+              <InlineImageWithLoading
                 src="/texas-image.png"
                 alt="Texas"
                 width={50}
                 height={50}
                 className="inline-block align-middle ml-2 rounded-2xl shadow-md w-10 h-10 sm:w-[50px] sm:h-[50px]"
+                priority
               />
             </div>
             <div className="font-bold flex items-center">Texas</div>
