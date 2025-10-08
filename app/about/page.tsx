@@ -13,7 +13,7 @@ export default function AboutPage() {
       <TopBlur />
 
       {/* Back button */}
-      <div className="px-4 py-4 relative z-10">
+      <div className="px-6 py-4 relative z-0">
         <Link
           href="/"
           className="flex items-center text-sm text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
@@ -24,14 +24,14 @@ export default function AboutPage() {
       </div>
 
       {/* Header */}
-      <header className="px-4 mb-6">
+      <header className="px-6 mb-6">
         <h1 className="font-['Instrument_Serif'] text-3xl font-bold tracking-tight text-primary">
           About Me
         </h1>
       </header>
 
       {/* Bio Section */}
-      <section className="px-4 mb-8">
+      <section className="px-6 mb-8">
         <p className="text-sm mb-4">
           When I'm not designing or coding, you can find me on the golf course or spending time away
           from the screen with family and friends.
@@ -46,28 +46,23 @@ export default function AboutPage() {
       </section>
 
       {/* Skills Section */}
-      <section className="px-4 mb-8">
+      <section className="px-6 mb-8">
         <h2 className="font-['Instrument_Serif'] text-xl font-bold mb-4">Skills & Expertise</h2>
 
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-3 gap-4">
           <SkillCategory
             title="Design"
-            skills={['UI/UX Design', 'Design Systems', 'Prototyping', 'User Research']}
+            skills={['Design Systems', 'Prototyping', 'User Research']}
           />
 
-          <SkillCategory
-            title="Frontend"
-            skills={['React', 'TypeScript', 'Next.js', 'Tailwind CSS']}
-          />
-        </div>
+          <SkillCategory title="Frontend" skills={['React', 'TypeScript']} />
 
-        <div className="mt-4">
-          <SkillCategory title="Tools" skills={['Figma', 'Adobe Suite', 'Git', 'Storybook']} />
+          <SkillCategory title="Tools" skills={['Figma', 'Cursor']} />
         </div>
       </section>
 
       {/* Experience Section */}
-      <section className="px-4 mb-8">
+      <section className="px-6 mb-8">
         <h2 className="font-['Instrument_Serif'] text-xl font-bold mb-4">Experience</h2>
 
         <div className="space-y-4">

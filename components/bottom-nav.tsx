@@ -4,7 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Home, User, Mail } from 'lucide-react';
-import { AnimatePresence, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 export default function BottomNav() {
   const pathname = usePathname();
@@ -89,31 +89,23 @@ function NavItem({
       onMouseLeave={() => setIsHovered(false)}
     >
       {/* Hover background */}
-      <AnimatePresence>
-        {!isActive && isHovered && (
-          <motion.div
-            className="absolute inset-0 rounded-full bg-secondary/50"
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 10 }}
-            transition={{ type: 'spring', stiffness: 400, damping: 25 }}
-          />
-        )}
-      </AnimatePresence>
+      {!isActive && isHovered && (
+        <motion.div
+          className="absolute inset-0 rounded-full bg-secondary/50"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+        />
+      )}
 
-      {/* Active background with animation */}
-      <AnimatePresence mode="wait">
-        {isActive && (
-          <motion.div
-            layoutId="nav-background"
-            className="absolute inset-0 bg-primary rounded-full"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ type: 'spring', duration: 0.3 }}
-          />
-        )}
-      </AnimatePresence>
+      {/* Active background with smooth animation between nav items */}
+      {isActive && (
+        <motion.div
+          layoutId="nav-background"
+          className="absolute inset-0 bg-primary rounded-full"
+          transition={{ type: 'spring', stiffness: 500, damping: 30 }}
+        />
+      )}
 
       <span
         className={`flex items-center gap-2 z-10 ${

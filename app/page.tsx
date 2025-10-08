@@ -10,7 +10,7 @@ export default function Home() {
       <TopBlur />
 
       {/* Hero Section */}
-      <section className="py-12 flex justify-center">
+      <section className="py-12 px-6 flex justify-center">
         <div className="flex flex-col gap-4">
           <div className="grid grid-cols-[auto_1fr] gap-x-4 font-['Instrument_Serif'] text-4xl sm:text-5xl md:text-6xl text-foreground mb-3 leading-snug">
             {/* Row 1 */}
@@ -72,7 +72,7 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="px-4">
+      <section id="about" className="px-6">
         {/* <h2 className="font-['Instrument_Serif'] text-2xl font-bold mb-4 text-center">About</h2> */}
         <p className="text-sm mb-4 text-muted-foreground">
           I'm a design engineer who lives in that sweet spot between design and code.
@@ -81,15 +81,11 @@ export default function Home() {
           I believe the codebase is the source of truth for design.
           <br />
           <br />
-          For me, great interfaces come down to hundreds of small decisions. The kind that most
-          people won't consciously notice, but will definitely feel. Like making sure every
-          interaction is keyboard-accessible, that focus states are clear, that loading states don't
-          flicker, and that the experience works beautifully whether you're on a phone or an
-          ultra-wide monitor.
+          Great interfaces come down to hundreds of small decisions. The kind that most people won't
+          consciously notice, but will definitely feel.
           <br />
-          <br />I believe the best design work happens when you're close to the code and close to
-          the customer. It's about finding problems worth solving, then crafting solutions with
-          intention to solve the problem end to end.
+          <br />
+          The best design work happens when you're close to the code and close to the customer.
         </p>
       </section>
 
@@ -99,7 +95,7 @@ export default function Home() {
       {/* Process Section removed */}
 
       {/* Footer */}
-      <footer className="py-6 px-4 text-center">
+      <footer className="py-6 px-6 text-center">
         <p className="text-xs text-muted-foreground">© 2025 Ben Vogt. All rights reserved.</p>
       </footer>
 
