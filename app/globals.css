@@ -1,0 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 46 67% 96%; /* Light beige */
+    --foreground: 28 16% 23%; /* Dark brown */
+    --card: 43 75% 98%; /* Lighter beige */
+    --card-foreground: 28 16% 23%; /* Dark brown */
+    --popover: 43 75% 98%; /* Lighter beige */
+    --popover-foreground: 28 16% 23%; /* Dark brown */
+    --primary: 86 17% 50%; /* Muted green */
+    --primary-foreground: 46 67% 96%; /* Light beige */
+    --secondary: 40 27% 91%; /* Light grayish beige */
+    --secondary-foreground: 28 16% 23%; /* Dark brown */
+    --muted: 40 27% 91%; /* Light grayish beige */
+    --muted-foreground: 30 9% 50%; /* Medium brown */
+    --accent: 40 27% 91%; /* Light grayish beige */
+    --accent-foreground: 28 16% 23%; /* Dark brown */
+    --destructive: 359 47% 52%; /* Muted red */
+    --destructive-foreground: 46 67% 96%; /* Light beige */
+    --border: 40 27% 91%; /* Light grayish beige */
+    --input: 40 27% 91%; /* Light grayish beige */
+    --ring: 86 17% 50%; /* Muted green */
+    --chart-1: 86 17% 50%; /* Muted green (example) */
+    --chart-2: 30 9% 50%; /* Medium brown (example) */
+    --chart-3: 28 16% 23%; /* Dark brown (example) */
+    --chart-4: 359 47% 52%; /* Muted red (example) */
+    --chart-5: 46 67% 96%; /* Light beige (example) */
+    --radius: 1rem; /* Increased border radius */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Blur effect styles */
+.absolute {
+  position: absolute;
+}
+
+.inset-0 {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.gradient-mask-b-0 {
+  -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, transparent 100%);
+  mask-image: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, transparent 100%);
+}
+
+.gradient-mask-t-0 {
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, transparent 100%);
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, transparent 100%);
+}
+
+.blur-1px {
+  -webkit-backdrop-filter: blur(1px);
+  backdrop-filter: blur(1px);
+}
+
+.blur-2px {
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+}
+
+.blur-3px {
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+}
+
+.blur-6px {
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+}
+
+.blur-12px {
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+}
