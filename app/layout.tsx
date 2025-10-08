@@ -8,6 +8,11 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
 export const metadata = {
   title: 'Ben Vogt | Design Engineer',
   description: 'Portfolio of Ben Vogt, Design Engineer',
+  icons: {
+    icon: '/person-image.png',
+    shortcut: '/person-image.png',
+    apple: '/person-image.png',
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
