@@ -108,7 +108,3 @@ export default function Home() {
     </div>
   );
 }
-
-// Projects section removed
-
-// Process Step Component removed

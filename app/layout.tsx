@@ -6,9 +6,8 @@ import { ThemeProvider } from '@/components/theme-provider';
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
 
 export const metadata = {
-  title: 'Alex Chen | UX Designer & Engineer',
-  description: 'Portfolio of Alex Chen, UX Designer and Frontend Engineer',
-  generator: 'v0.dev',
+  title: 'Ben Vogt | Design Engineer',
+  description: 'Portfolio of Ben Vogt, Design Engineer',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
