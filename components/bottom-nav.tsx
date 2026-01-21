@@ -1,6 +1,5 @@
 'use client';
 
-import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Home, User, Mail } from 'lucide-react';
@@ -8,7 +7,6 @@ import { motion } from 'framer-motion';
 
 export default function BottomNav() {
   const pathname = usePathname();
-  const isHomePage = pathname === '/';
 
   return (
     <>
@@ -41,23 +39,21 @@ export default function BottomNav() {
         <nav className="flex items-center gap-3 px-3 py-2.5 bg-foreground/90 rounded-full backdrop-blur-sm">
           <NavItem
             href="/"
-            icon={<Home className="w-5 h-5" />}
+            icon={<Home className="w-4 h-4" />}
             text="Home"
             isActive={pathname === '/'}
-            id="home"
           />
           <NavItem
             href="/about"
-            icon={<User className="w-5 h-5" />}
+            icon={<User className="w-4 h-4" />}
             text="About"
             isActive={pathname === '/about'}
-            id="about"
           />
           <NavItem
             href="mailto:benjaminvogt23@gmail.com"
-            icon={<Mail className="w-5 h-5" />}
+            icon={<Mail className="w-4 h-4" />}
             text="Contact"
-            id="contact"
+            isActive={false}
           />
         </nav>
       </div>
@@ -70,32 +66,20 @@ function NavItem({
   icon,
   text,
   isActive = false,
-  id,
 }: {
   href: string;
   icon: React.ReactNode;
   text: string;
   isActive?: boolean;
-  id: string;
 }) {
-  const [isHovered, setIsHovered] = React.useState(false);
-
   return (
     <Link
       href={href}
-      className="flex items-center justify-center p-1.5 px-3 relative rounded-full"
-      data-id={id}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
+      className="flex items-center justify-center p-1.5 px-3 relative rounded-full group"
     >
-      {/* Hover background */}
-      {!isActive && isHovered && (
-        <motion.div
-          className="absolute inset-0 rounded-full bg-secondary/50"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-        />
+      {/* Hover background - using CSS transitions instead of JS state */}
+      {!isActive && (
+        <div className="absolute inset-0 rounded-full bg-secondary/50 opacity-0 transition-opacity duration-200 group-hover:opacity-100" />
       )}
 
       {/* Active background with smooth animation between nav items */}
@@ -103,12 +87,12 @@ function NavItem({
         <motion.div
           layoutId="nav-background"
           className="absolute inset-0 bg-primary rounded-full"
-          transition={{ type: 'spring', stiffness: 500, damping: 30 }}
+          transition={{ type: 'spring', stiffness: 400, damping: 35 }}
         />
       )}
 
       <span
-        className={`flex items-center gap-2 z-10 ${
+        className={`flex items-center gap-2 z-10 transition-colors duration-200 ${
           isActive ? 'text-primary-foreground' : 'text-secondary'
         }`}
       >

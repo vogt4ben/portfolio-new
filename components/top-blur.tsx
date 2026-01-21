@@ -1,6 +1,6 @@
 export default function TopBlur() {
   return (
-    <div className="fixed inset-x-0 top-0 isolate z-[10] h-[100px] pointer-events-none">
+    <div className="fixed inset-x-0 top-0 isolate z-[10] h-[70px] pointer-events-none">
       <div
         className="absolute inset-0 gradient-mask-t-0 blur-12px"
         style={{ backgroundColor: 'rgba(255, 255, 255, 0.01)' }}

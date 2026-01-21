@@ -57,7 +57,7 @@ export default function AboutPage() {
 
           <SkillCategory title="Frontend" skills={['React', 'TypeScript']} />
 
-          <SkillCategory title="Tools" skills={['Figma', 'Cursor']} />
+          <SkillCategory title="Tools" skills={['Figma', 'Cursor', 'Claude Code']} />
         </div>
       </section>
 
