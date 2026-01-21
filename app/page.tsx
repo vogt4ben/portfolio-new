@@ -100,7 +100,7 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="py-6 px-6 text-center">
-        <p className="text-xs text-muted-foreground">© 2025 Ben Vogt</p>
+        <p className="text-xs text-muted-foreground">© 2026 Ben Vogt</p>
       </footer>
 
       {/* Bottom Navigation */}
